@@ -24,10 +24,7 @@ int myAtoi(string str){
 
 	unsigned i = 0;
 
-	for(; i < str.length(); ){
-		if(str[i] == ' ')  ++i;
-		else break;
-	}
+	for(; isspace(str[i]); str++);
 
     if(str[i] == '-' || str[i] == '+'){
         curInteger.push_back(str[i++]);
